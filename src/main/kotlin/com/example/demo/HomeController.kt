@@ -3,6 +3,8 @@ package com.example.demo
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.RequestParam
 
 @Controller
 class HomeController {
@@ -12,15 +14,5 @@ class HomeController {
         model.addAttribute("name", "Kari")
         model.addAttribute("totalVisits", 42)
         return "index"
-    }
-    
-    @GetMapping("/about")
-    fun about(): String {
-        return "about"
-    }
-    
-    @GetMapping("/overview")
-    fun overview(): String {
-        return "overview"
     }
 }
