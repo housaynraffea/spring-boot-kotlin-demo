@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8">
+    <head th:replace="~{fragments/layout :: head}">
         <title>My Spring Boot-page</title>
     </head>
-    <body>
-        <div th:replace="~{fragments/layout :: nav}"></div>
-        <h1 th:text="'Welcome, ' + ${name} + '!'"></h1>
-        <p>This is my first ever Spring-Boot page.</p>
-        <p>This page has been visited <span th:text="${totalVisits}"></span> times.</p>
-        <div th:replace="~{fragments/layout :: footer}"></div>
+    <body class="bg">
+        <div class="center">
+            <div th:replace="~{fragments/layout :: nav}"></div>
+            <h1 th:text="'Welcome, ' + ${name} + '!'"></h1>
+            <p>This is my first ever Spring-Boot page.</p>
+        </div>
     </body>
+    <footer th:replace="~{fragments/layout :: footer}"></footer>
 </html>

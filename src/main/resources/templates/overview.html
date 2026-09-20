@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8">
+    <head th:replace="~{fragments/layout :: head}">
         <title>Overview</title>
     </head>
-    <body>
-        <div th:replace="~{fragments/layout :: nav}"></div>
-        <h1>Overview</h1>
-        <p>This page shows an overview of what is implemented in this website. Currently, this Spring Boot website has:</p>
-        <p>    - 5 thymeleaf pages</p>
-        <p>    - A POST-form (accessible through the '<a href=/contact>Contact</a>'-page)</p>
-        <p>    - fragments for a navigation bar and a footer</p>
-        <p>What is NOT implemented YET, but will soon be implemented afterwards:</p>
-        <p>    - Two APIs (currently one for tasks)</p>
-        <p>    - CSS-styling</p>
-        <p>    - th:each/th:if</p>
-        <div th:replace="~{fragments/layout :: footer}"></div>
+    <body class="bg">
+        <div class="center">
+            <div th:replace="~{fragments/layout :: nav}"></div>
+            <h1>Overview</h1>
+            <p>This page shows an overview of what is implemented in this website. Currently, this Spring Boot website has:</p>
+            <p>    - 5 thymeleaf pages</p>
+            <p>    - A POST-form (accessible through the '<a href=/contact>Contact</a>'-page)</p>
+            <p>    - fragments for a navigation bar and a footer</p>
+            <p>What is NOT implemented YET, but will soon be implemented afterwards:</p>
+            <p>    - Two APIs (currently one for tasks)</p>
+            <p>    - CSS-styling</p>
+            <p>    - th:each/th:if</p>
+        </div>
     </body>
+    <footer th:replace="~{fragments/layout :: footer}"></footer>
 </html>

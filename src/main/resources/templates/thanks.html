@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8">
+    <head th:replace="~{fragments/layout :: head}">
         <title>Thank you!</title>
     </head>
-    <body>
-        <div th:replace="~{fragments/layout :: nav}"></div>
-        <h1 th:text="'Thank you, ' + ${name} + '!'"></h1>
-        <p>Thank you for contacting me! <br>Unfortunately, for a very silly and funny reason, I have no way to really read your message. Your message wasn't even sent somewhere. But hey! If you wrote something nice, thank you! If you wrote something really mean, though...</p>
-        <div th:replace="~{fragments/layout :: footer}"></div>
+    <body class="bg">
+        <div class="center">
+            <div th:replace="~{fragments/layout :: nav}"></div>
+            <h1 th:text="'Thank you, ' + ${name} + '!'"></h1>
+            <p>Thank you for contacting me! <br>Unfortunately, for a very silly and funny reason, I have no way to really read your message. Your message wasn't even sent somewhere. But hey! If you wrote something nice, thank you! If you wrote something really mean, though...</p>
+        </div>
     </body>
+    <footer th:replace="~{fragments/layout :: footer}"></footer>
 </html>

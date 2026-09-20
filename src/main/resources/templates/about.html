@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8">
+    <head th:replace="~{fragments/layout :: head}">
         <title>About me</title>
     </head>
-    <body>
-        <div th:replace="~{fragments/layout :: nav}"></div>
-        <h1>About me</h1>
-        <p>This page is about me</p>
-        <div th:replace="~{fragments/layout :: footer}"></div>
+    <body class="bg">
+        <div class="center">
+            <div th:replace="~{fragments/layout :: nav}"></div>
+            <div class="center about-me-row">
+                <h1>ABOUT ME</h1>
+                <div class="center about-me-column">
+                    <p>(a picture of me)</p>
+                    <img src="Media.jpg" width="350">
+                </div>
+                <div class="center about-me-column about-me-text">
+                    <p>Hello, my name is Housayn Raffea! I am 21 years old (born in 2005).</p>
+                    <p>I used to develop games as a hobby (I still try to), and I decided to study Software Development at USN to learn more about, and participate in the process of developing various software/websites</p>
+                    <p>My hobbies include:
+                    <br>- Playing games
+                    <br>- Design (UX, UI, Covers, Logos, anything that has to do with visual design)
+                    <br>- Reading books
+                    <br>- Drawing/Animating
+                    <br>- Composing music (I'm a newbie)</p>
+                    <p>For my hardware, I use:
+                    <br>- A Samsung Notebook 4 (Windows 11): This is the laptop I use for work/studies.
+                    <br>- A Lenovo IdeaPad Slim3 (Fedora 44): This is the laptop I use for my personal projects & to play games.<br> For the window manager, I use <a href="https://github.com/niri-wm/niri">Niri</a> (A scrollable-tiling window manager). For the status bar, I use <a href="https://github.com/noctalia-dev/noctalia">Noctalia v5</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
     </body>
+    <footer th:replace="~{fragments/layout :: footer}"></footer>
 </html>
