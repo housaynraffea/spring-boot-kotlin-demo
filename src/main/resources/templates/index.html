@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Spring Boot-page</title>
+    </head>
+    <body>
+        <div th:replace="~{fragments/layout :: nav}"></div>
+        <h1 th:text="'Welcome, ' + ${name} + '!'"></h1>
+        <p>This is my first ever Spring-Boot page.</p>
+        <p>This page has been visited <span th:text="${totalVisits}"></span> times.</p>
+        <div th:replace="~{fragments/layout :: footer}"></div>
+    </body>
+</html>
