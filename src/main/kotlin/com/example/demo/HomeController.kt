@@ -11,7 +11,6 @@ class HomeController {
     
     @GetMapping("/")
     fun home(model: Model): String {
-        model.addAttribute("name", "Kari")
         return "index"
     }
 }
