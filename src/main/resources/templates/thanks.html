@@ -7,7 +7,14 @@
         <div class="center">
             <div th:replace="~{fragments/layout :: nav}"></div>
             <h1 th:text="'Thank you, ' + ${name} + '!'"></h1>
-            <p>Thank you for contacting me! <br>Unfortunately, for a very silly and funny reason, I have no way to really read your message. Your message wasn't even sent somewhere. But hey! If you wrote something nice, thank you! If you wrote something really mean, though...</p>
+            <p>
+                Thank you for contacting me!
+                <br>Unfortunately, for a very silly and funny reason,
+                <br>I have no way to really read your message.
+                <br>Your message wasn't even sent somewhere.
+                <br>But hey! If you wrote something nice, thank you!
+                <br>If you wrote something really mean, though...
+            </p>
         </div>
     </body>
     <footer th:replace="~{fragments/layout :: footer}"></footer>

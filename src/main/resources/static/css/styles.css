@@ -21,7 +21,7 @@
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #55AF56;
+  background-color: #009396;
   color: #FFFFFF;
 }
 
@@ -32,7 +32,6 @@
 
 .center {
   display: flex;
-  text-align: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -76,10 +75,6 @@
   font-size: 24px;
 }
 
-.login-evaluator {
-  color: #FF0000;
-}
-
 .about-me-column {
   float: right;
   width: 50%;
@@ -92,7 +87,20 @@
   clear: both;
 }
 
-.about-me-text{
+.about-me-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  word-wrap: break-word;
+  align-items: center;
+  text-align: center;
+}
+
+.about-me-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  word-wrap: break-word;
   align-items: center;
   width: 25%;
   text-align: justify;

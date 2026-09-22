@@ -31,7 +31,6 @@ class TaskController {
         return ResponseEntity.ok(task) 
     }
     
-    
     @PostMapping
     fun addTask(@RequestBody new: NewTask): ResponseEntity<Task> {
         val newTask = Task(id = tasks.size + 1, text = new.text)

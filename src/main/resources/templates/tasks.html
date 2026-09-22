@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{fragments/layout :: head}">
+        <title>My Spring Boot-page</title>
+    </head>
+    <body class="bg">
+        <div class="center">
+            <div th:replace="~{fragments/layout :: nav}"></div>
+            <h1>Tasks</h1>
+            <p>Here are the tasks for today:</p>
+            <ul>
+                <li th:each="task : ${tasks}" th:text="${task}"></li>
+            </ul>
+        </div>
+    </body>
+    <footer th:replace="~{fragments/layout :: footer}"></footer>
+</html>
