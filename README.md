@@ -7,7 +7,7 @@ This repository demonstrates (some of) Spring Boot & Kotlin's impressive feature
 Right now, this demo has the following:
 
 - 5 thymeleaf-pages
-- A POST-form accessible through the 'Contact'-page
+- A simple POST-form accessible through the 'Contact'-page
 - Navbar- and footer fragments used throughout the entire website
 - Custom CSS-styling
 - Two APIs (/api/tasks & /api/student-attendance)
