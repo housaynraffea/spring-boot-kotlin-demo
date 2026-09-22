@@ -31,12 +31,24 @@ class StudentAttendanceController {
         return ResponseEntity.ok(student)
     }
     
+    @PutMapping("/{studentId}")
+    fun setAttendance(@PathVariable studentId: Int, @RequestParam attended: Boolean): ResponseEntity<Student> {
+        val studentIndex = students.indexOfFirst { it.studentId == studentId }
+        if (studentIndex == -1) return ResponseEntity.status(HttpStatus.NOT_FOUND).build()
+        
+        val studentAttended = students[studentIndex].copy(attended = attended)
+        students[studentIndex] = studentAttended
+        
+        return ResponseEntity.ok(studentAttended)
+    }
+    
     @PostMapping
     fun registerStudent(@RequestBody new: NewStudent): ResponseEntity<Student> {
-        val newStudent = Student(studentId = students.size + 1, firstname = new.firstname, lastname = new.lastname, email = new.email)
+        val newStudent = Student(studentId = new.studentId, firstname = new.firstname, lastname = new.lastname, email = new.email)
         students.add(newStudent)
         return ResponseEntity.status(HttpStatus.CREATED).body(newStudent)
     }
+    
     
     @DeleteMapping("/{studentId}")
     fun removeStudent(@PathVariable studentId: Int): ResponseEntity<Map<String, String>> {

@@ -19,6 +19,7 @@ Right now, this demo has the following:
 |------|---------|----------|
 |GET|/api/tasks|Get all tasks|
 |GET|/api/tasks/{id}|Get one task|
+|PUT|/api/task/{id}?finished={finished}|Set task finished|
 |POST|/api/tasks|Create a new task|
 |DELETE|/api/tasks/{id}|Delete a task|
 
@@ -36,6 +37,7 @@ curl -X POST http://localhost:8080/api/tasks \
 |------|---------|----------|
 |GET|/api/student-attendance|Get all students|
 |GET|/api/student-attendance/{studentId}|Get one student|
+|PUT|/api/student-attendance/{studentId}?attended={attended}|Set student attendance|
 |POST|/api/student-attendance|Register a new student|
 |DELETE|/api/student-attendance/{studentId}|Remove a student|
 

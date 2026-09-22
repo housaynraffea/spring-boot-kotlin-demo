@@ -31,6 +31,17 @@ class TaskController {
         return ResponseEntity.ok(task) 
     }
     
+    @PutMapping("/{id}")
+    fun setFinished(@PathVariable id: Int, @RequestParam finished: Boolean): ResponseEntity<Task> {
+        val index = tasks.indexOfFirst { it.id == id }
+        if (index == -1) return ResponseEntity.status(HttpStatus.NOT_FOUND).build()
+        
+        val taskFinished = tasks[index].copy(finished = finished)
+        tasks[index] = taskFinished
+        
+        return ResponseEntity.ok(taskFinished)
+    }
+    
     @PostMapping
     fun addTask(@RequestBody new: NewTask): ResponseEntity<Task> {
         val newTask = Task(id = tasks.size + 1, text = new.text)
